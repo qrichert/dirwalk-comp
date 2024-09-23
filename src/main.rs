@@ -30,7 +30,10 @@ fn clear_file_cache() {
         .arg("sync && sudo purge");
 }
 
+#[cfg(target_os = "macos")]
 const PATH: &str = "/Users/Quentin/Developer";
+#[cfg(target_os = "linux")]
+const PATH: &str = "/home/quentin/Developer";
 
 fn main() {
     let path: &Path = Path::new(PATH);

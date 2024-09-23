@@ -34,3 +34,33 @@ JWalk:    Found 2023 files in 0.439331888
 fd:       Found 1934 files in 0.09947689
 find:     Found 2019 files in 2.524565515
 ```
+
+## Linux
+
+Cold cache:
+
+```
+Carbon:   Found 577 files in 1.527975232
+CarbonP:  Found 577 files in 0.33455244
+WalkDir:  Found 577 files in 0.910558192
+WalkDirP: Found 577 files in 0.821553563
+Ignore:   Found 558 files in 0.416761838
+IgnoreP:  Found 558 files in 0.204380032
+JWalk:    Found 579 files in 0.916951869
+fd:       Found 558 files in 0.13291991
+find:     Found 577 files in 5.5169958900000005
+```
+
+Warm cache:
+
+```
+Carbon:   Found 577 files in 0.236916258
+CarbonP:  Found 577 files in 0.105301974
+WalkDir:  Found 577 files in 0.087252964
+WalkDirP: Found 577 files in 0.08318606
+Ignore:   Found 558 files in 0.061670223
+IgnoreP:  Found 558 files in 0.038070257
+JWalk:    Found 579 files in 0.131403706
+fd:       Found 558 files in 0.036952801
+find:     Found 577 files in 0.593970773
+```
