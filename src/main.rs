@@ -13,6 +13,9 @@ use std::process::Command;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::time;
 
+#[global_allocator]
+static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
+
 #[cfg(target_os = "linux")]
 fn clear_file_cache() {
     _ = Command::new("sudo")
