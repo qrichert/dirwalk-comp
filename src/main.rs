@@ -13,6 +13,19 @@ use std::process::Command;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::time;
 
+#[cfg(all(
+    not(windows),
+    not(target_os = "android"),
+    not(target_os = "macos"),
+    not(target_os = "freebsd"),
+    not(target_os = "openbsd"),
+    not(all(target_env = "musl", target_pointer_width = "32")),
+    not(target_arch = "riscv64"),
+    feature = "jemallocator"
+))]
+#[global_allocator]
+static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
+
 #[global_allocator]
 static ALLOC: jemallocator::Jemalloc = jemallocator::Jemalloc;
 
